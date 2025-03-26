@@ -1,0 +1,548 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.language-selector select {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-selector select:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.language-selector select option {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Cultural Corner Specific */
+.culture-selector {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.culture-selector label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.culture-selector select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+.tip-prompt {
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.culture-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.culture-categories {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background: #34495e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .culture-categories {
+        flex-direction: column;
+    }
+    
+    .category-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Translation Results */
+.translate-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.translate-input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+#textToTranslate {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.translation-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+}
+
+.translation-error {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff0f0;
+    color: #d63031;
+    border-radius: 4px;
+}
+
+/* Dictionary Section */
+.dictionary-box {
+    margin-top: 1rem;
+}
+
+.dictionary-hint {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+#wordInput {
+    padding: 0.5rem;
+    width: 70%;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Country Information Section */
+.country-selector {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.country-selector select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.country-hint {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+#countryResult {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.country-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.country-flag {
+    max-width: 200px;
+    margin: 1rem 0;
+}
+
+/* Available Phrases Section */
+.available-phrases {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+.available-phrases h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.phrase-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.phrase-category {
+    padding: 0.5rem;
+}
+
+.phrase-category h5 {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.phrase-category p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Practice Mode */
+.practice-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.practice-controls select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    flex: 1;
+}
+
+.flashcard-container {
+    perspective: 1000px;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.flashcard {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flashcard.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.card-label {
+    color: #666;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 1rem 0;
+}
+
+.card-hint {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.card-progress {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.flashcard-front {
+    background: #fff;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.flashcard-back {
+    background: #f8f9fa;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.flashcard-controls {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.flashcard-controls button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.flashcard-controls button:hover {
+    background: #34495e;
+}
+
+/* Saved Phrases Section */
+.saved-phrases-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.saved-hint {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.saved-phrase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.phrase-content {
+    flex-grow: 1;
+}
+
+.phrase-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #2c3e50;
+    color: white;
+}
+
+.delete-btn {
+    background: #c74e41;
+    color: white;
+}
+
+.danger-btn {
+    background: #c74e41;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.no-phrases-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 2rem 0;
+}
+
+/* Common Button Styles */
+.learn-more, 
+#lookupBtn, 
+#translateBtn, 
+#savePhrase {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.learn-more:hover, 
+#lookupBtn:hover, 
+#translateBtn:hover, 
+#savePhrase:hover {
+    background: #34495e;
+}
+
+/* Translation Section */
+.translate-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.translate-input-group {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+#textToTranslate {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Footer Styles */
+.main-footer {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    color: rgba(255,255,255,0.8);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}

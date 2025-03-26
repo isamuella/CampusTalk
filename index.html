@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusTalk - Your Campus Language Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">CampusTalk</div>
+        <div class="language-selector">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="rw">Kinyarwanda</option>
+                <option value="sw">Swahili</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+    </nav>
+
+    
+    <main>
+        
+        <section class="daily-phrase" id="daily-phrase">
+            <h2>Phrase of the Day</h2>
+            <div class="phrase-card">
+                <p id="dailyPhrase">Loading...</p>
+                <p id="phraseTranslation">Loading...</p>
+                <button id="savePhrase" class="action-btn">Save Phrase</button>
+            </div>
+        </section>
+
+        
+        <section class="translator">
+            <h2>Quick Translate</h2>
+            <div class="translate-box">
+                <div class="translate-input-group">
+                    <textarea id="textToTranslate" placeholder="Enter text to translate..."></textarea>
+                    <button id="translateBtn" class="action-btn">Translate</button>
+                </div>
+                <div id="translationResult"></div>
+                <div class="available-phrases">
+                    <h4>Example Phrases:</h4>
+                    <div class="phrase-categories">
+                        <div class="phrase-category">
+                            <h5>Greetings</h5>
+                            <p>"Hello, how are you?"</p>
+                        </div>
+                        <div class="phrase-category">
+                            <h5>Basics</h5>
+                            <p>"My name is"</p>
+                        </div>
+                        <div class="phrase-category">
+                            <h5>Common Phrases</h5>
+                            <p>"thank you", "please", "excuse me", "sorry", "good morning"</p>
+                        </div>
+                        <div class="phrase-category">
+                            <h5>Questions</h5>
+                            <p>"where is", "what time", "how much", "can you help"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="dictionary" id="dictionary">
+            <h2>Campus Dictionary</h2>
+            <div class="dictionary-box">
+                <div class="dictionary-language">
+                    <select id="dictionaryLang">
+                        <option value="en">English</option>
+                        <option value="rw">Kinyarwanda</option>
+                        <option value="sw">Swahili</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+                <input type="text" id="wordInput" placeholder="Enter a word to look up...">
+                <button id="lookupBtn" class="action-btn">Look Up</button>
+                <p class="dictionary-hint">Try common campus words like: hello, book, student, teacher, class</p>
+                <div id="dictionaryResult"></div>
+            </div>
+        </section>
+
+        
+        <section class="country-info" id="culture-info">
+            <h2>Cultural Context</h2>
+            <div class="country-selector">
+                <select id="countrySelect">
+                    <option value="RW">Rwanda (Kinyarwanda)</option>
+                    <option value="KE">Kenya (Swahili & English)</option>
+                    <option value="TZ">Tanzania (Swahili)</option>
+                    <option value="GB">United Kingdom (English)</option>
+                    <option value="FR">France (French)</option>
+                </select>
+                <button class="learn-more" id="getCountryInfo">Learn More</button>
+                <p class="country-hint">Learn about the countries where these languages are spoken</p>
+            </div>
+            <div id="countryResult"></div>
+        </section>
+
+        
+        <section class="cultural-corner" id="cultural-corner">
+            <h2>Cultural Corner</h2>
+            <div class="culture-card">
+                <div class="culture-selector">
+                    <label for="cultureSelect">Select Country:</label>
+                    <select id="cultureSelect">
+                        <option value="rwanda">Rwanda</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="tanzania">Tanzania</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="france">France</option>
+                    </select>
+                </div>
+                <h3>Did You Know?</h3>
+                <div id="culturalTip">
+
+                    <p class="tip-prompt">Select a category below to learn more!</p>
+                </div>
+                <div class="culture-categories">
+                    <button class="category-btn" data-category="etiquette">Etiquette</button>
+                    <button class="category-btn" data-category="customs">Customs</button>
+                    <button class="category-btn" data-category="taboos">Do's & Don'ts</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="practice-mode" id="practice-time">
+            <h2>Practice Time</h2>
+            <div class="practice-controls">
+                <select id="practiceCategory">
+                    <option value="greetings">Greetings & Basic Phrases</option>
+                    <option value="classroom">Classroom Vocabulary</option>
+                    <option value="numbers">Numbers & Time</option>
+                    <option value="culture">Cultural Knowledge</option>
+                </select>
+                <select id="practiceLang">
+                    <option value="en-rw">English to Kinyarwanda</option>
+                    <option value="en-sw">English to Swahili</option>
+                    <option value="en-fr">English to French</option>
+                </select>
+            </div>
+            <div class="flashcard-container">
+                <div class="flashcard">
+                    <div class="flashcard-front">
+                    </div>
+                    <div class="flashcard-back">
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button id="prevCard">Previous</button>
+                    <button id="flipCard">Flip</button>
+                    <button id="nextCard">Next</button>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="saved-phrases" id="saved-phrases">
+            <h2>My Saved Phrases</h2>
+            <div class="saved-phrases-header">
+                <p class="saved-hint">Save useful phrases to practice later</p>
+                <button id="clearAllPhrases" class="danger-btn">Clear All</button>
+            </div>
+            <div id="phrasesList">
+
+            </div>
+            <p id="noPhrasesMessage" class="no-phrases-message" style="display: none;">
+                No saved phrases yet. Try saving some phrases from above!
+            </p>
+        </section>
+    </main>
+
+    
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CampusTalk</h3>
+                <p>Your Campus Language Companion - Making language learning accessible and fun for students.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#daily-phrase">Home</a></li>
+                    <li><a href="#dictionary">Dictionary</a></li>
+                    <li><a href="#culture-info">Culture</a></li>  
+                    <li><a href="#practice-time">Practice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Created by Ineza Samuella</p>
+                <p>First Year Project</p>
+                <a href="https://github.com/isamuella">GitHub</a>
+                <a href="https://www.linkedin.com/in/samuella-ineza/">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
