@@ -3,7 +3,7 @@
 [CampusTalk](https://www.isamuella.tech) is a web application designed to help international students adapt to new environments by breaking language barriers. Whether navigating a market, making friends, or simply trying to understand day-to-day conversations, CampusTalk provides the tools you need to communicate the basics effectively.
 
 ## Demo Video
-https://youtu.be/uCKtqgANCI0
+[Link to YouTube Video](https://youtu.be/uCKtqgANCI0)
 
 ## Purpose
 
