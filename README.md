@@ -1,6 +1,9 @@
 # CampusTalk - Your Campus Language Companion
 
-CampusTalk is a web application designed to help international students adapt to new environments by breaking language barriers. Whether you're navigating a market, making friends, or simply trying to understand day-to-day conversations, CampusTalk provides the tools you need to communicate the basics effectively.
+CampusTalk is a web application designed to help international students adapt to new environments by breaking language barriers. Whether navigating a market, making friends, or simply trying to understand day-to-day conversations, CampusTalk provides the tools you need to communicate the basics effectively.
+
+## Demo Video
+https://youtu.be/uCKtqgANCI0
 
 ## Purpose
 
@@ -8,7 +11,7 @@ CampusTalk was created with international students in mind, such as an Ethiopian
 
 ## Features
 
-- **Phrase of the Day**: Learn a new phrase every day to improve your vocabulary.
+- **Phrase of the Day**: Learn a new phrase daily to improve your vocabulary.
 - **Quick Translate**: Translate words or phrases into English or other supported languages.
 - **Campus Dictionary**: Look up common words and phrases for better understanding.
 - **Cultural Context**: Explore cultural tips and country-specific information to connect better with locals.
@@ -73,7 +76,7 @@ This application is deployed across multiple servers for reliability and perform
 ## Future Improvements
 - Add more languages and phrases to support a wider audience
 - Include audio pronunciation for phrases to improve learning
-- Enhance the design for better user experience
+- Enhance the design for a better user experience
 - Add user accounts to save progress and personalize the experience
 - Implement a more robust translation API for better accuracy
 - Create a mobile app version for on-the-go learning
@@ -83,8 +86,8 @@ During development, several challenges were encountered:
 
 1. **Limited API Usage**: Made sure not to overuse external services by saving common translations
 2. **Browser Differences**: Tested the website on different browsers to ensure it works everywhere
-3. **Mobile Friendly Design**: Made sure the website looks good on phones and tablets
-4. **Working Offline**: Added basic functionality that works even without internet connection
+3. **Mobile-Friendly Design**: Made sure the website looks good on phones and tablets
+4. **Working Offline**: Added basic functionality that works even without an internet connection
 
 ## Acknowledgments
 CampusTalk was inspired by the challenges faced by international students in adapting to new environments. Special thanks to the African Leadership University community for inspiring this project and providing valuable feedback.
